@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="kr" xmlns:th="http://www.thymelaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Spring Mail Template Example</title>
+    </head>
+    <body>
+        <div th:text="${title}"></div>
+        <table border="1">
+            <tr>
+                <th style="width: 50px;">No</th>
+                <th style="width: 150px;">Title</th>
+                <th style="width: 150px;">Content</th>
+            </tr>
+            <tr th:each="study : ${list}" align="center">
+                <td th:text="${study.idx}"></td>
+                <td th:text="${study.title}"></td>
+                <td th:text="${study.content}"></td>
+            </tr>
+        </table>
+    </body>
+</html>
